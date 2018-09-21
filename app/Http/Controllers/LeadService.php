@@ -207,6 +207,7 @@ class LeadService extends Controller
         $log_crontab->save();
       
         $channels = DB::table("channels")
+                ->where('id', '=', '3459')
                 ->orderBy('channels.id', 'asc')
                 ->get();
 
@@ -279,7 +280,7 @@ class LeadService extends Controller
 
     public function leadServiceCall()
     {
-        set_time_limit(300);
+        set_time_limit(600);
 
         $config = Config::where('type', '=', 'leadServiceCall')->first();
 
@@ -366,7 +367,7 @@ class LeadService extends Controller
 
     public function leadServiceForm()
     {
-        set_time_limit(300);
+        set_time_limit(600);
 
         $config = Config::where('type', '=', 'leadServiceForm')->first();
 
