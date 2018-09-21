@@ -24,7 +24,7 @@ class LeadService extends Controller
 
     public function leadServiceAccount()
     {
-        set_time_limit(3600);
+        set_time_limit(300);
         
         $log_crontab = new Log_Crontab;
         $log_crontab->type = "Account";
@@ -129,7 +129,7 @@ class LeadService extends Controller
     
     public function leadServiceCampaign()
     {
-        set_time_limit(3600);
+        set_time_limit(300);
         
         $log_crontab = new Log_Crontab;
         $log_crontab->type = "Campaign";
@@ -196,7 +196,7 @@ class LeadService extends Controller
     
     public function leadServiceChannel()
     {
-        set_time_limit(7200);
+        set_time_limit(300);
         
         $log_crontab = new Log_Crontab;
         $log_crontab->type = "Channel";
