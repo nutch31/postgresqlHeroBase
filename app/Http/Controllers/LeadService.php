@@ -43,7 +43,7 @@ class LeadService extends Controller
 
         foreach($accounts as $account)
         {            
-            $ch = curl_init("https://e82797ce.ngrok.io/leadService/public/postaccount");
+            $ch = curl_init("http://128.199.186.53/leadService/public/index.php/postaccount");
             curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json'));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POST, true);
@@ -148,7 +148,7 @@ class LeadService extends Controller
 
         foreach($campaigns as $campaign)
         {            
-            $ch = curl_init("https://e82797ce.ngrok.io/leadService/public/postcampaign");
+            $ch = curl_init("http://128.199.186.53/leadService/public/index.php/postcampaign");
             curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json'));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POST, true);
@@ -215,7 +215,7 @@ class LeadService extends Controller
 
         foreach($channels as $channel)
         {            
-            $ch = curl_init("https://e82797ce.ngrok.io/leadService/public/postchannel");
+            $ch = curl_init("http://128.199.186.53/leadService/public/index.php/postchannel");
             curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json'));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POST, true);
@@ -302,7 +302,7 @@ class LeadService extends Controller
 
         foreach($calls as $call)
         {            
-            $ch = curl_init("https://e82797ce.ngrok.io/leadService/public/postcall");
+            $ch = curl_init("http://128.199.186.53/leadService/public/index.php/postcall");
             curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json'));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POST, true);
@@ -389,7 +389,7 @@ class LeadService extends Controller
                 
         foreach($forms as $form)
         {                                        
-            $ch = curl_init("https://e82797ce.ngrok.io/leadService/public/postform");
+            $ch = curl_init("http://128.199.186.53/leadService/public/index.php/postform");
             curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json'));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POST, true);
