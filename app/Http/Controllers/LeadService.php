@@ -207,7 +207,6 @@ class LeadService extends Controller
         $log_crontab->save();
       
         $channels = DB::table("channels")
-                ->where('id', '=', '3459')
                 ->orderBy('channels.id', 'asc')
                 ->get();
 
