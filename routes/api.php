@@ -31,6 +31,7 @@ Route::get('test', 'ConnectPostgreSQL@test');
 
 Route::get('leadServiceAccount', 'LeadService@leadServiceAccount');
 Route::get('leadServiceCampaign', 'LeadService@leadServiceCampaign');
+//Becarefull cause Some Tracking Phone filter by manual
 Route::get('leadServiceChannel', 'LeadService@leadServiceChannel');
 Route::get('leadServiceCall', 'LeadService@leadServiceCall');
 Route::get('leadServiceForm', 'LeadService@leadServiceForm');

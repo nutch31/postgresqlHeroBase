@@ -14,7 +14,7 @@ class Herobase extends Model
     //
     public function Crontab_call()
     {
-        set_time_limit(300);
+        set_time_limit(3600);
 
         $config = Config::where('type', '=', 'calls')->first();
 
@@ -129,7 +129,7 @@ class Herobase extends Model
 
     public function Crontab_form()
     {
-        set_time_limit(300);
+        set_time_limit(3600);
 
         $config = Config::where('type', '=', 'forms')->first();
 
