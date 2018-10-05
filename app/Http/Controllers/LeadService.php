@@ -129,7 +129,7 @@ class LeadService extends Controller
     
     public function leadServiceCampaign()
     {
-        set_time_limit(600);
+        set_time_limit(1200);
         
         $log_crontab = new Log_Crontab;
         $log_crontab->type = "Campaign";
@@ -196,7 +196,7 @@ class LeadService extends Controller
     
     public function leadServiceChannel()
     {
-        set_time_limit(1200);
+        set_time_limit(1800);
         
         $log_crontab = new Log_Crontab;
         $log_crontab->type = "Channel";
@@ -215,7 +215,7 @@ class LeadService extends Controller
 
         foreach($channels as $channel)
         {            
-            $ch = curl_init("http://128.199.186.53/leadService/public/index.php/postchannel");
+            $ch = curl_init("http://leadservice.heroleads.co.th/leadService/public/index.php/postchannel");
             curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json'));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POST, true);
@@ -279,7 +279,7 @@ class LeadService extends Controller
 
     public function leadServiceCall()
     {
-        set_time_limit(300);
+        set_time_limit(600);
 
         $config = Config::where('type', '=', 'leadServiceCall')->first();
 
@@ -302,7 +302,7 @@ class LeadService extends Controller
 
         foreach($calls as $call)
         {            
-            $ch = curl_init("http://128.199.186.53/leadService/public/index.php/postcall");
+            $ch = curl_init("http://leadservice.heroleads.co.th/leadService/public/index.php/postcall");
             curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json'));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POST, true);
@@ -366,7 +366,7 @@ class LeadService extends Controller
 
     public function leadServiceForm()
     {
-        set_time_limit(300);
+        set_time_limit(600);
 
         $config = Config::where('type', '=', 'leadServiceForm')->first();
 
@@ -389,7 +389,7 @@ class LeadService extends Controller
                 
         foreach($forms as $form)
         {                                        
-            $ch = curl_init("http://128.199.186.53/leadService/public/index.php/postform");
+            $ch = curl_init("http://leadservice.heroleads.co.th/leadService/public/index.php/postform");
             curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json'));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POST, true);
